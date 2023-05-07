@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    padding: 20px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.music{
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: antiquewhite;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 35px 15px 35px ;
+}
+.music-thumb{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+}
+.music-thumb img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100rem;
+    box-shadow: 0 0 0 3px #ffb86c, 0 0 0 6px white, 0 0 0 9px #ff6bcb;
+
+}
+.music-name{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.timer{
+    display: flex;
+    justify-content: space-between;
+}
