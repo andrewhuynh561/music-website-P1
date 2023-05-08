@@ -86,7 +86,7 @@ html {
     inset: 0;
     background-image: linear-gradient(to right bottom, #ff6bcb, #ffb86c);
     transform: scale(1.5);
-    border-radius: 150rem;
+    border-radius: 100rem;
   }
   .player-inner {
     width: 50px;

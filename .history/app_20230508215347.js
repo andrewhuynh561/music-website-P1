@@ -4,15 +4,10 @@ const nextBtn =document.querySelector(".play-forward");
 const backBtn =document.querySelector(".play-back");
 
 let index =0;
-const lists = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"];
+let lists =["holo.mp3,home.mp3,spark.mp3,summer.mp3"];
 let isPlaying = true;
 playBtn.addEventListener("click",playPause);
-nextBtn.addEventListener("click",function() {
-    changeSong(1);
-});
-backBtn.addEventListener("click",function() {
-    changeSong(-1);
-});
+nextBtn.addEventListener("click",changeSong(1));
 function playPause(){
     if (isPlaying){
         song.play();
@@ -31,19 +26,11 @@ function changeSong(dir){
         // move to next song
 
         index ++;
-        if (index >= lists.length){
-            index=0;
-        }
-        song.setAttribute("src",`./musics/${lists[index]}`)
-    
+        console.log(index);
+
     }else if(dir ===-1){
 
         index --;
-        if (index < 0){
-            index=lists.length-1;
-        }
     }
-    isPlaying = true;
-    playPause();
 
 }

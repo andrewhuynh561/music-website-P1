@@ -4,7 +4,7 @@ const nextBtn =document.querySelector(".play-forward");
 const backBtn =document.querySelector(".play-back");
 
 let index =0;
-const lists = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"];
+let lists =["holo.mp3,home.mp3,spark.mp3,summer.mp3"];
 let isPlaying = true;
 playBtn.addEventListener("click",playPause);
 nextBtn.addEventListener("click",function() {
@@ -35,7 +35,7 @@ function changeSong(dir){
             index=0;
         }
         song.setAttribute("src",`./musics/${lists[index]}`)
-    
+
     }else if(dir ===-1){
 
         index --;

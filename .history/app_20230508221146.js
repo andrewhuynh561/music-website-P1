@@ -35,15 +35,15 @@ function changeSong(dir){
             index=0;
         }
         song.setAttribute("src",`./musics/${lists[index]}`)
-    
+        isPlaying = true;
     }else if(dir ===-1){
 
         index --;
         if (index < 0){
             index=lists.length-1;
         }
+        isPlaying = true;
     }
-    isPlaying = true;
     playPause();
 
 }

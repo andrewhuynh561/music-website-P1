@@ -43,7 +43,7 @@ function changeSong(dir){
             index=lists.length-1;
         }
     }
-    isPlaying = true;
+    
     playPause();
 
 }
