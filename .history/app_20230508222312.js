@@ -4,7 +4,6 @@ const nextBtn =document.querySelector(".play-forward");
 const backBtn =document.querySelector(".play-back");
 const durationTime =document.querySelector(".duration");
 const remainingTime =document.querySelector(".remaining");
-const rangeBar = document.querySelector(".range");
 
 let index =0;
 const lists = ["holo.mp3", "summer.mp3", "spark.mp3", "home.mp3"];
@@ -32,12 +31,15 @@ function playPause(){
 function changeSong(dir){
     if(dir===1){
         // move to next song
+
         index ++;
         if (index >= lists.length){
             index=0;
         }
-        song.setAttribute("src",`./musics/${lists[index]}`)   
+        song.setAttribute("src",`./musics/${lists[index]}`)
+    
     }else if(dir ===-1){
+
         index --;
         if (index < 0){
             index=lists.length-1;
@@ -45,18 +47,5 @@ function changeSong(dir){
     }
     isPlaying = true;
     playPause();
-   
-}
 
-function Timer(){
-  const { duration, currentTime } = song;
-  rangeBar.max = duration;
-  rangeBar.value = currentTime;
-  remainingTime.textContent = formatTimer(currentTime);
-  if (!duration) {
-    durationTime.textContent = "00:00";
-  } else {
-    durationTime.textContent = formatTimer(duration);
-  }
 }
-Timer();
