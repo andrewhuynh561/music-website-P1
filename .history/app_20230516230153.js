@@ -124,7 +124,7 @@ function handleChangeBar() {
   song.currentTime = rangeBar.value;
 }
 function init(indexSong) {
-  song.setAttribute("src", `./musics/${musics[indexSong].file}`);
+  song.setAttribute("src", `./music/${musics[indexSong].file}`);
   musicImage.setAttribute("src", musics[indexSong].image);
   musicName.textContent = musics[indexSong].title;
 }
